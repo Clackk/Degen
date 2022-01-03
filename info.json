@@ -1,0 +1,21 @@
+{
+    "name": "Other",
+    "short": "A (not so) useful cog for all of your (degenerated) furry needs",
+    "description": "A cog that gathers and sends images from various animal api's as well as degenerate pictures from e621.net and beyond",
+    "end_user_data_statement": "This cog does not persistently store any data or metadata about users. sue me.",
+    "install_msg": "Thank you for installing! what is wrong with you? NSFW ITEMS",
+    "author": [
+        "clack#4405"
+    ],
+    "required_cogs": {},
+    "requirements": [],
+    "tags": [
+        "api",
+        "e621",
+        "uwu"
+    ],
+    "min_bot_version": "3.3.10",
+    "hidden": false,
+    "disabled": false,
+    "type": "COG"
+}

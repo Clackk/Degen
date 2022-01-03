@@ -51,7 +51,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -69,7 +69,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -87,7 +87,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -106,7 +106,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -125,7 +125,7 @@ class Degen(commands.Cog):
 
         #headers = CaseInsensitiveDict()
         #headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        #headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        #headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         #resp = requests.get(url, headers=headers,).json()
         #yiff = json.dumps(resp)
@@ -143,7 +143,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -161,7 +161,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -179,7 +179,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -197,7 +197,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -215,7 +215,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -233,7 +233,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -251,7 +251,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -269,7 +269,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -287,7 +287,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -305,7 +305,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -323,7 +323,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -341,7 +341,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -359,7 +359,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -376,7 +376,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -394,7 +394,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -412,7 +412,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -430,7 +430,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)

@@ -343,7 +343,7 @@ class Degen(commands.Cog):
         await ctx.send(uwu)
         
     @yiff.command()
-    async def andromorph(self, ctx):
+    async def andro(self, ctx):
         """Andromorphic Yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -361,7 +361,7 @@ class Degen(commands.Cog):
         await ctx.send(uwu)
         
     @yiff.command()
-    async def gay(self, ctx):
+    async def g(self, ctx):
         """Gay Yiff"""
         # actual command
         await ctx.send("real degen hours")
@@ -379,7 +379,7 @@ class Degen(commands.Cog):
         await ctx.send(uwu)
         
     @yiff.command()
-    async def gynomorph(self, ctx):
+    async def gyno(self, ctx):
         """Gynomorphic Yiff"""
         # actual command
         url = "https://v2.yiff.rest/furry/yiff/gynomorph"
@@ -396,7 +396,7 @@ class Degen(commands.Cog):
         await ctx.send(uwu)
         
     @yiff.command()
-    async def lesbian(self, ctx):
+    async def lesb(self, ctx):
         """Lesbian Yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -414,7 +414,7 @@ class Degen(commands.Cog):
         await ctx.send(uwu)
         
     @yiff.command()
-    async def straight(self, ctx):
+    async def strt(self, ctx):
         """Straight Yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -432,9 +432,9 @@ class Degen(commands.Cog):
         await ctx.send(uwu)
         
     @yiff.command()
-    async def futa(self, ctx):
+    async def futaaaa(self, ctx):
         """futa yiff"""
-        # actual command
+      # actual command
         await ctx.send("*Blep*")
         url = "https://v2.yiff.rest/furry/yiff/dickgirl"
 

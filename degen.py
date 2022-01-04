@@ -2,7 +2,7 @@ from redbot.core import commands
 import discord
 import requests
 import json
-
+from imageio import imread
 from requests.structures import CaseInsensitiveDict
 
 
@@ -25,24 +25,28 @@ class Degen(commands.Cog):
         """A fact about foxes with a cute fox image to boot!"""
         # actual command
         await ctx.send("cute as fuck")
-        imgurl = "https://some-random-api.ml/img/fox"
-        # Fox image
-        imgresp = requests.get(imgurl)
 
-        foximg = imgresp.json()["link"]
+        # Fox image
+        imgurl = "https://randomfox.ca/floof/"
+        imgresp = requests.get(imgurl)
+        foximg = imgresp.json()["image"]
         await ctx.send(foximg)
-        
-        facturl = "https://some-random-api.ml/facts/fox"
+
         # Fox fact
-    
+        facturl = "https://some-random-api.ml/facts/fox"
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
         resp = requests.get(facturl, headers=headers,)
 
         fact = resp.json()["fact"]
         await ctx.send(fact)
+    @commands.group()
+    async def furry(self, ctx):
+        """All commands furry and floofy"""
+        if ctx.invoked_subcommand is None:
+            await ctx.send('You need to specify a subcommand')
 
-    @commands.command()
+    @furry.command()
     async def blep(self, ctx):
         """A blep picture"""
         # actual command
@@ -69,7 +73,7 @@ class Degen(commands.Cog):
 
         headers = CaseInsensitiveDict()
         headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621.net)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
@@ -134,7 +138,7 @@ class Degen(commands.Cog):
         #uwu = blep[0].get("url")
         #await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def boop(self, ctx):
         """A picture of a boop"""
         # actual command
@@ -152,7 +156,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def cuddle(self, ctx):
         """mm cuddly"""
         # actual command
@@ -170,8 +174,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def flopp(self, ctx):
+    @furry.command()
+    async def floppy(self, ctx):
         """floopy"""
         # actual command
         await ctx.send("*floop*")
@@ -188,7 +192,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def fursuit(self, ctx):
         """A cool fursuit picture"""
         # actual command
@@ -206,7 +210,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def hold(self, ctx):
         """floof hold"""
         # actual command
@@ -224,7 +228,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def howl(self, ctx):
         """A howling picture"""
         # actual command
@@ -242,8 +246,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def hugg(self, ctx):
+    @furry.command()
+    async def hug(self, ctx):
         """were having soft tacos later"""
         # actual command
         await ctx.send("thas cute")
@@ -260,7 +264,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def kiss(self, ctx):
         """floof kiss"""
         # actual command
@@ -278,7 +282,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def lick(self, ctx):
         """a lick"""
         # actual command
@@ -296,7 +300,7 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @furry.command()
     async def propose(self, ctx):
         """floof proposal"""
         # actual command
@@ -314,7 +318,13 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
+    @commands.group()
+    async def yiff(self, ctx):
+        """Yiff and related subcommands"""
+        if ctx.invoked_subcommand is None:
+            await ctx.send('You need to specify a subcommand')
+
+    @yiff.command()
     async def bulge(self, ctx):
         """bulge noticed"""
         # actual command
@@ -332,8 +342,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def andyiff(self, ctx):
+    @yiff.command()
+    async def andromorph(self, ctx):
         """Andromorphic Yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -350,8 +360,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def gyiff(self, ctx):
+    @yiff.command()
+    async def gay(self, ctx):
         """Gay Yiff"""
         # actual command
         await ctx.send("real degen hours")
@@ -368,8 +378,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def gynoyiff(self, ctx):
+    @yiff.command()
+    async def gynomorph(self, ctx):
         """Gynomorphic Yiff"""
         # actual command
         url = "https://v2.yiff.rest/furry/yiff/gynomorph"
@@ -385,8 +395,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def leyiff(self, ctx):
+    @yiff.command()
+    async def lesbian(self, ctx):
         """Lesbian Yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -403,8 +413,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def styiff(self, ctx):
+    @yiff.command()
+    async def straight(self, ctx):
         """Straight Yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -421,8 +431,8 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
-    @commands.command()
-    async def fuyiff(self, ctx):
+    @yiff.command()
+    async def futa(self, ctx):
         """futa yiff"""
         # actual command
         await ctx.send("*Blep*")
@@ -439,3 +449,99 @@ class Degen(commands.Cog):
         uwu = blep[0].get("url")
         await ctx.send(uwu)
         
+    @commands.group()
+    async def e6(self, ctx):
+        """e621.net commands for all the secret degenerates out there"""
+        if ctx.invoked_subcommand is None:
+            await ctx.send('You need to specify a subcommand')
+        # actual command
+    @e6.command()
+
+    async def straight(self, ctx):
+        """straight yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>100+male/female&limit=1"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[0].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()
+    async def gay(self, ctx):
+        """gay yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>100+male/male&limit=1"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[0].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()
+    async def lesbian(self, ctx):
+        """lesbian yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>100+female/female&limit=1"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[0].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()
+    async def mawshot(self, ctx):
+        """mawshot yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>100+mawshot&limit=1"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[0].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()
+    async def paw(self, ctx):
+        """gay yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>100+foot_play&limit=1"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[0].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def good(self, ctx):
+        """high favorited yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>100&limit=1"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[0].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)

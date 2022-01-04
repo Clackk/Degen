@@ -2,8 +2,8 @@ from redbot.core import commands
 import discord
 import requests
 import json
-from imageio import imread
 from requests.structures import CaseInsensitiveDict
+import random
 
 
 
@@ -459,89 +459,89 @@ class Degen(commands.Cog):
 
     async def straight(self, ctx):
         """straight yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>100+male/female&limit=1"
-
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+male/female&limit=50"
+        select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("posts")
-        uwu = blep[0].get("sample")
+        uwu = blep[select].get("sample")
         img = uwu.get("url")
         await ctx.send(img)
 
     @e6.command()
     async def gay(self, ctx):
         """gay yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>100+male/male&limit=1"
-
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+male/male&limit=50"
+        select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("posts")
-        uwu = blep[0].get("sample")
+        uwu = blep[select].get("sample")
         img = uwu.get("url")
         await ctx.send(img)
 
     @e6.command()
     async def lesbian(self, ctx):
         """lesbian yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>100+female/female&limit=1"
-
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+female/female&limit=50"
+        select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("posts")
-        uwu = blep[0].get("sample")
+        uwu = blep[select].get("sample")
         img = uwu.get("url")
         await ctx.send(img)
 
     @e6.command()
     async def mawshot(self, ctx):
         """mawshot yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>100+mawshot&limit=1"
-
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+mawshot&limit=50"
+        select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("posts")
-        uwu = blep[0].get("sample")
+        uwu = blep[select].get("sample")
         img = uwu.get("url")
         await ctx.send(img)
 
     @e6.command()
     async def paw(self, ctx):
         """gay yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>100+foot_play&limit=1"
-
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+foot_play&limit=50"
+        select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("posts")
-        uwu = blep[0].get("sample")
+        uwu = blep[select].get("sample")
         img = uwu.get("url")
         await ctx.send(img)
 
     @e6.command()   
     async def good(self, ctx):
         """high favorited yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>100&limit=1"
-
+        url = "https://e621.net/posts.json?tags=favcount%3A>50&limit=50"
+        select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("posts")
-        uwu = blep[0].get("sample")
+        uwu = blep[select].get("sample")
         img = uwu.get("url")
         await ctx.send(img)

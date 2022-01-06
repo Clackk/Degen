@@ -534,7 +534,172 @@ class Degen(commands.Cog):
     @e6.command()   
     async def good(self, ctx):
         """high favorited yiff from e621.net"""
-        url = "https://e621.net/posts.json?tags=favcount%3A>50&limit=50"
+        url = "https://e621.net/posts.json?tags=favcount%3A>500&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def canine(self, ctx):
+        """Canine-centric or including yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+canine&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def vulpine(self, ctx):
+        """Fox-centric or including yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+vulpine&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def feline(self, ctx):
+        """Feline-centric or including yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+felid&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def collar(self, ctx):
+        """yiff including collars from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+collar&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def goodboy(self, ctx):
+        """what it says on the tin, man"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+pet_praise&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def femboy(self, ctx):
+        """femboy yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+girly+male&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def latex(self, ctx):
+        """getting adventurous, are we?"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+latex+latex_transformation&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def anal(self, ctx):
+        """anay yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+anal&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+    
+    @e6.command()   
+    async def licc(self, ctx):
+        """cunnilingus yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+cunnilingus&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+        
+    @e6.command()   
+    async def ass(self, ctx):
+        """eat ass yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+rimming&limit=50"
+        select = random.randint(0, 49)
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("posts")
+        uwu = blep[select].get("sample")
+        img = uwu.get("url")
+        await ctx.send(img)
+
+    @e6.command()   
+    async def oral(self, ctx):
+        """oral yiff from e621.net"""
+        url = "https://e621.net/posts.json?tags=favcount%3A>50+oral&limit=50"
         select = random.randint(0, 49)
         headers = CaseInsensitiveDict()
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"

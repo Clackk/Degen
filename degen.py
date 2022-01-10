@@ -961,7 +961,7 @@ class Degen(commands.Cog):
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
 
-     @e6.command()   
+    @e6.command()   
     async def top(self, ctx):
         """top rated yiff from e621.net"""
         if ctx.channel.is_nsfw() == False:

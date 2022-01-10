@@ -961,4 +961,28 @@ class Degen(commands.Cog):
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
 
+     @e6.command()   
+    async def top(self, ctx):
+        """top rated yiff from e621.net"""
+        if ctx.channel.is_nsfw() == False:
+            await ctx.send("This command is only available in NSFW channels.")
+
+        else:
+            url = "https://e621.net/posts.json?tags=favcount%3A>50+order:top&limit=50"
+            select = random.randint(0, 49)
+            headers = CaseInsensitiveDict()
+            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+            resp = requests.get(url, headers=headers,).json()
+            yiff = json.dumps(resp)
+            url = json.loads(yiff)
+            blep = url.get("posts")
+            uwu = blep[select].get("sample")
+            img = uwu.get("url")
+            ## create embed for picture
+            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
+            embed.set_image(url=img)
+            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+
+    
+    
     

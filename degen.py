@@ -38,7 +38,8 @@ class Degen(commands.Cog):
         resp = requests.get(facturl, headers=headers,)
         fact = resp.json()["fact"]
         # embed
-        embed = discord.Embed(title="A fact about foxes!", description=fact, color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="A fact about foxes!", description=fact, color=color)
         embed.set_image(url=foximg)
         embed.set_footer(text="Powered by some-random-api.ml and randomfox.ca")
         await ctx.send(embed=embed)
@@ -65,7 +66,9 @@ class Degen(commands.Cog):
         url = json.loads(yiff)
         blep = url.get("images")
         uwu = blep[0].get("url")
-        embed = discord.Embed(title="A blep picture!", color=0x00ff00)
+        ## ramomize embed color
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="A blep picture!", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -86,7 +89,9 @@ class Degen(commands.Cog):
         url = json.loads(yiff)
         blep = url.get("images")
         uwu = blep[0].get("url")
-        embed = discord.Embed(title="A cheeta picture!", color=0x00ff00)
+        ## ramomize embed color
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="A cheeta picture!", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -108,7 +113,9 @@ class Degen(commands.Cog):
         url = json.loads(yiff)
         blep = url.get("images")
         uwu = blep[0].get("url")
-        embed = discord.Embed(title="A Dik Dik picture!", color=0x00ff00)
+        ## ramomize embed color
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="A Dik Dik picture!", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -130,7 +137,9 @@ class Degen(commands.Cog):
         url = json.loads(yiff)
         blep = url.get("images")
         uwu = blep[0].get("url")
-        embed = discord.Embed(title="A cute lynx picture!", color=0x00ff00)
+        ## ramomize embed color
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="A cute lynx picture!", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -171,7 +180,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Boop*", description="hehehe", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Boop*", description="hehehe", color=color)
         embed.set_image(url=uwu)
         await ctx.send(embed=embed)
         
@@ -192,7 +202,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Cuddle*", description="hehehe", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Cuddle*", description="hehehe", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -215,7 +226,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Flop*", description="hehehe", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Flop*", description="hehehe", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -238,7 +250,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Fursuit*", description="bro I want one", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Fursuit*", description="bro I want one", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -260,7 +273,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Hold*", description="mm warm floofs", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Hold*", description="mm warm floofs", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -282,7 +296,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Howl*", description="*ahem* *howl*", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Howl*", description="*ahem* *howl*", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -305,7 +320,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Hug*", description="thas cute", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Hug*", description="thas cute", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -327,7 +343,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Kiss*", description=":eyes:", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Kiss*", description=":eyes:", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -350,7 +367,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Lick*", description="**mlem**", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Lick*", description="**mlem**", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -372,7 +390,8 @@ class Degen(commands.Cog):
         blep = url.get("images")
         uwu = blep[0].get("url")
         ## create embed for picture
-        embed = discord.Embed(title="*Propose*", description="wedding menace mac", color=0x00ff00)
+        color = random.randint(0, 0xffffff)
+        embed = discord.Embed(title="*Propose*", description="wedding menace mac", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
@@ -407,7 +426,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*Bulge*", description="*owo*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="*Bulge*", description="*owo*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -439,7 +459,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="OWO", description="*Blep*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="OWO", description="*Blep*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -469,7 +490,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*mlem*", description="*real degen hours*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="*mlem*", description="*real degen hours*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -498,7 +520,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -528,7 +551,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -559,7 +583,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -589,7 +614,8 @@ class Degen(commands.Cog):
                 blep = url.get("images")
                 uwu = blep[0].get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                color = random.randint(0, 0xffffff)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
                 embed.set_image(url=uwu)
                 embed.set_footer(text="Powered by yiff.rest")
                 await ctx.send(embed=embed)
@@ -624,7 +650,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -650,7 +676,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -676,7 +702,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -702,7 +728,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -729,7 +755,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -755,7 +781,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -781,7 +807,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -807,7 +833,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -833,7 +859,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -859,7 +885,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -885,7 +911,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -911,7 +937,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -937,7 +963,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -963,7 +989,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -990,7 +1016,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -1017,7 +1043,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -1043,7 +1069,7 @@ class Degen(commands.Cog):
                 uwu = blep[select].get("sample")
                 img = uwu.get("url")
                 ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
                 embed.set_image(url=img)
                 embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
                 await ctx.send(embed=embed)
@@ -1094,7 +1120,7 @@ class Degen(commands.Cog):
 
             else:
                 search = search.replace("-", "+") 
-                url = "https://e621.net/posts.json?tags=favcount%3A>50+order:random+" + search + "&limit=50"
+                url = "https://e621.net/posts.json?tags=favcount%3A>10+order:random+" + search + "&limit=50"
 
                 select = random.randint(0, 49)
                 headers = CaseInsensitiveDict()

@@ -849,6 +849,7 @@ class Degen(commands.Cog):
             embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
 
     @e6.command()   
     async def latex(self, ctx):
@@ -871,6 +872,7 @@ class Degen(commands.Cog):
             embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
 
     @e6.command()   
     async def anal(self, ctx):
@@ -893,6 +895,7 @@ class Degen(commands.Cog):
             embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
 
     
     @e6.command()   
@@ -916,6 +919,8 @@ class Degen(commands.Cog):
             embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
+        
         
     @e6.command()   
     async def ass(self, ctx):
@@ -938,6 +943,7 @@ class Degen(commands.Cog):
             embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
 
     @e6.command()   
     async def oral(self, ctx):
@@ -957,9 +963,12 @@ class Degen(commands.Cog):
             uwu = blep[select].get("sample")
             img = uwu.get("url")
             ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
+            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
+
+ 
 
     @e6.command()   
     async def top(self, ctx):
@@ -982,7 +991,39 @@ class Degen(commands.Cog):
             embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
             embed.set_image(url=img)
             embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+            await ctx.send(embed=embed)
 
     
-    
+    @e6.command()   
+    async def search(self, ctx, search: str):
+        """searh your own tags from e621.net, Please use valid tags from e621.net, seperate tags by -, tags with two words should be spaced with an underscore (e.g. 'furry_cat'). please do not place spaces before or after tags. a proper query should look like this: `+e6 search garfield-furry_cat-rating:s`"""
+        if ctx.channel.is_nsfw() == False:
+            await ctx.send("This command is only available in NSFW channels.")
+
+        else:
+            search = search.replace("-", "+") 
+            url = "https://e621.net/posts.json?tags=favcount%3A>50+order:random+" + search + "&limit=50"
+
+            select = random.randint(0, 49)
+            headers = CaseInsensitiveDict()
+            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+            resp = requests.get(url, headers=headers,).json()
+            yiff = json.dumps(resp)
+            url = json.loads(yiff)
+            blep = url.get("posts")
+            uwu = blep[select].get("sample")
+            ## throw error if no results
+            if blep == []:
+                await ctx.send("No results found, please try again.")
+            else:
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
+
+
+
+
     

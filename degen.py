@@ -384,188 +384,215 @@ class Degen(commands.Cog):
   
 
     @yiff.command()
-    async def bulge(self, ctx):
+    async def ybulge(self, ctx):
         """bulge noticed"""
-        # check if user is in nsfw channel, stops command from running if not
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-        
+        ## throw error if not in a server
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://v2.yiff.rest/furry/bulge"
+            # check if user is in nsfw channel, stops command from running if not
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+            
+            else:
+                url = "https://v2.yiff.rest/furry/bulge"
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*Bulge*", description="*owo*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*Bulge*", description="*owo*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
 
             
     @yiff.command()
-    async def andro(self, ctx):
+    async def yandro(self, ctx):
         """Andromorphic Yiff"""
         # actual command
-        # check if user is in nsfw channel, stops command from running if not
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        ## throw error if not in a server
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            
-            url = "https://v2.yiff.rest/furry/yiff/andromorph"
+            # check if user is in nsfw channel, stops command from running if not
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+            else:
+                
+                url = "https://v2.yiff.rest/furry/yiff/andromorph"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="OWO", description="*Blep*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="OWO", description="*Blep*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
         
     @yiff.command()
-    async def g(self, ctx):
+    async def ygay(self, ctx):
         """Gay Yiff"""
-        # actual command
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        ## throw error if command is not run in a server
+        if ctx.guild is None:
+            await ctx.send("This command is not available in DM's")
         else:
-            
-            url = "https://v2.yiff.rest/furry/yiff/gay"
+            # actual command
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+            else:
+                
+                url = "https://v2.yiff.rest/furry/yiff/gay"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*mlem*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*mlem*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
         
     @yiff.command()
-    async def gyno(self, ctx):
+    async def ygyno(self, ctx):
         """Gynomorphic Yiff"""
         # actual command
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        ## throw error if not in a server
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://v2.yiff.rest/furry/yiff/gynomorph"
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+            else:
+                url = "https://v2.yiff.rest/furry/yiff/gynomorph"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
 
             
     @yiff.command()
-    async def lesb(self, ctx):
+    async def ylesbian(self, ctx):
         """Lesbian Yiff"""
         # actual command
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            
-            url = "https://v2.yiff.rest/furry/yiff/lesbian"
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+            else:
+                
+                url = "https://v2.yiff.rest/furry/yiff/lesbian"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
 
         
     @yiff.command()
-    async def strt(self, ctx):
+    async def ystraight(self, ctx):
         """Straight Yiff"""
         # actual command
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
             
-            url = "https://v2.yiff.rest/furry/yiff/straight"
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+            else:
+                
+                url = "https://v2.yiff.rest/furry/yiff/straight"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
         
     @yiff.command()
-    async def futaaaa(self, ctx):
+    async def yfuta(self, ctx):
         """futa yiff"""
         # actual command
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-    
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            
-            url = "https://v2.yiff.rest/furry/yiff/dickgirl"
 
-            headers = CaseInsensitiveDict()
-            headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+        
+            else:
+                
+                url = "https://v2.yiff.rest/furry/yiff/dickgirl"
 
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("images")
-            uwu = blep[0].get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=uwu)
-            embed.set_footer(text="Powered by yiff.rest")
-            await ctx.send(embed=embed)
+                headers = CaseInsensitiveDict()
+                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
+
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("images")
+                uwu = blep[0].get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=uwu)
+                embed.set_footer(text="Powered by yiff.rest")
+                await ctx.send(embed=embed)
         
     @commands.group()
     async def e6(self, ctx):
@@ -577,451 +604,516 @@ class Degen(commands.Cog):
 
     async def straight(self, ctx):
         """straight yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        # actual command
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+male/female&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+male/female&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()
     async def gay(self, ctx):
         """gay yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+male/male&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+male/male&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()
     async def lesbian(self, ctx):
         """lesbian yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+female/female&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+female/female&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()
     async def mawshot(self, ctx):
         """mawshot yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+mawshot&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+mawshot&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
 
     @e6.command()
     async def paw(self, ctx):
-        """gay yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        """pawb yiff from e621.net, aka pawshot"""
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+foot_play&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+foot_play&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def good(self, ctx):
         """high favorited yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>500&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>500&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def canine(self, ctx):
         """Canine-centric or including yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+canine&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+canine&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def vulpine(self, ctx):
         """Fox-centric or including yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+vulpine&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+vulpine&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def feline(self, ctx):
         """Feline-centric or including yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+felid&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+felid&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def collar(self, ctx):
         """yiff including collars from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+collar&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+collar&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def goodboy(self, ctx):
         """what it says on the tin, man"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+pet_praise&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+pet_praise&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def femboy(self, ctx):
         """femboy yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+girly+male&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+girly+male&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def latex(self, ctx):
         """getting adventurous, are we?"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+latex_transformation&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+latex_transformation&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def anal(self, ctx):
         """anal yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+anal&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+anal&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     
     @e6.command()   
     async def licc(self, ctx):
         """cunnilingus yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>75+cunnilingus&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>75+cunnilingus&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
         
         
     @e6.command()   
     async def ass(self, ctx):
         """eat ass yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+            await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+rimming&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+rimming&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
     @e6.command()   
     async def oral(self, ctx):
         """oral yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        if ctx.guild is None:
+                    await ctx.send("This command can only be used in a server.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+oral&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+oral&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                uwu = blep[select].get("sample")
+                img = uwu.get("url")
+                ## create embed for picture
+                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x00ff00)
+                embed.set_image(url=img)
+                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                await ctx.send(embed=embed)
 
  
 
     @e6.command()   
     async def top(self, ctx):
         """top rated yiff from e621.net"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        ## throw error if command is run outside of a guild
+        if ctx.guild is None:
+            await ctx.send("This command is only available in servers.")
         else:
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+order:top&limit=50"
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            img = uwu.get("url")
-            ## create embed for picture
-            embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
-            embed.set_image(url=img)
-            embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-            await ctx.send(embed=embed)
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
+            else:
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+order:top&limit=50"
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                ## throw error if posts is empty
+                if blep == []:
+                    await ctx.send("No posts found, please try again or check your tags.")
+                else:
+                    uwu = blep[select].get("sample")
+                    img = uwu.get("url")
+                    ## create embed for picture
+                    embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
+                    embed.set_image(url=img)
+                    embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                    await ctx.send(embed=embed)
 
     
     @e6.command()   
     async def search(self, ctx, search: str):
         """searh your own tags from e621.net, Please use valid tags from e621.net, seperate tags by -, tags with two words should be spaced with an underscore (e.g. 'furry_cat'). please do not place spaces before or after tags. a proper query should look like this: `+e6 search garfield-furry_cat-rating:s`"""
-        if ctx.channel.is_nsfw() == False:
-            await ctx.send("This command is only available in NSFW channels.")
-
+        ## throw error if command is run outside of a guild
+        if ctx.guild is None:
+            await ctx.send("This command is not available in DM's.")
         else:
-            search = search.replace("-", "+") 
-            url = "https://e621.net/posts.json?tags=favcount%3A>50+order:random+" + search + "&limit=50"
+        ## check if channel has nsfw atribute
+            if ctx.channel.is_nsfw() == False:
+                await ctx.send("This command is only available in NSFW channels.")
 
-            select = random.randint(0, 49)
-            headers = CaseInsensitiveDict()
-            headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
-            resp = requests.get(url, headers=headers,).json()
-            yiff = json.dumps(resp)
-            url = json.loads(yiff)
-            blep = url.get("posts")
-            uwu = blep[select].get("sample")
-            ## throw error if no results
-            if blep == []:
-                await ctx.send("No results found, please try again.")
             else:
-                img = uwu.get("url")
-                ## create embed for picture
-                embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
-                embed.set_image(url=img)
-                embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
-                await ctx.send(embed=embed)
+                search = search.replace("-", "+") 
+                url = "https://e621.net/posts.json?tags=favcount%3A>50+order:random+" + search + "&limit=50"
+
+                select = random.randint(0, 49)
+                headers = CaseInsensitiveDict()
+                headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621)"
+                resp = requests.get(url, headers=headers,).json()
+                yiff = json.dumps(resp)
+                url = json.loads(yiff)
+                blep = url.get("posts")
+                ## throw error if posts is empty
+                if blep == []:
+                    await ctx.send("No results found, please try again or check your tags.")
+                else:
+                    uwu = blep[select].get("sample")
+                    img = uwu.get("url")
+                    ## create embed for picture
+                    embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=0x1d2985)
+                    embed.set_image(url=img)
+                    embed.set_footer(text="Powered by e621.net" + " | " + "https://e621.net/post/show/" + str(blep[select].get("id")))
+                    await ctx.send(embed=embed)
 
 
 

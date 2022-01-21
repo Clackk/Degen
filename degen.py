@@ -55,10 +55,9 @@ class Degen(commands.Cog):
     async def blep(self, ctx):
         """A blep picture"""
         # actual command
-        url = "https://v2.yiff.rest/animals/blep"
+        url = "https://v2.yiff.rest/animals/blep?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -78,10 +77,9 @@ class Degen(commands.Cog):
         """A cheeta picture"""
         # actual command
      
-        url = "https://v2.yiff.rest/animals/cheeta"
+        url = "https://v2.yiff.rest/animals/cheeta?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)(racketclack on e621.net)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -102,10 +100,9 @@ class Degen(commands.Cog):
         """A picture of a Dik Dik"""
         # actual command
       
-        url = "https://v2.yiff.rest/animals/dikdik"
+        url = "https://v2.yiff.rest/animals/dikdik?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -126,10 +123,9 @@ class Degen(commands.Cog):
         """A cute lynx picture"""
         # actual command
        
-        url = "https://v2.yiff.rest/animals/lynx"
+        url = "https://v2.yiff.rest/animals/lynx?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -168,10 +164,9 @@ class Degen(commands.Cog):
     async def boop(self, ctx):
         """A picture of a boop"""
         # actual command
-        url = "https://v2.yiff.rest/furry/boop"
+        url = "https://v2.yiff.rest/furry/boop?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -190,10 +185,9 @@ class Degen(commands.Cog):
         """mm cuddly"""
         # actual command
      
-        url = "https://v2.yiff.rest/furry/cuddle"
+        url = "https://v2.yiff.rest/furry/cuddle?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -214,10 +208,9 @@ class Degen(commands.Cog):
         """floopy"""
         # actual command
      
-        url = "https://v2.yiff.rest/furry/flop"
+        url = "https://v2.yiff.rest/furry/flop?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -238,10 +231,9 @@ class Degen(commands.Cog):
         """A cool fursuit picture"""
         # actual command
     
-        url = "https://v2.yiff.rest/furry/fursuit"
+        url = "https://v2.yiff.rest/furry/fursuit?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -262,10 +254,9 @@ class Degen(commands.Cog):
         """hehehe"""
         # actual command
     
-        url = "https://v2.yiff.rest/furry/butts"
+        url = "https://v2.yiff.rest/furry/butts?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -287,10 +278,9 @@ class Degen(commands.Cog):
         """floof hold"""
         # actual command
     
-        url = "https://v2.yiff.rest/furry/hold"
+        url = "https://v2.yiff.rest/furry/hold?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -310,10 +300,9 @@ class Degen(commands.Cog):
         """A howling picture"""
         # actual command
      
-        url = "https://v2.yiff.rest/furry/howl"
+        url = "https://v2.yiff.rest/furry/howl?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -334,10 +323,9 @@ class Degen(commands.Cog):
         """were having soft tacos later"""
         # actual command
      
-        url = "https://v2.yiff.rest/furry/hug"
+        url = "https://v2.yiff.rest/furry/hug?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -357,10 +345,9 @@ class Degen(commands.Cog):
         """floof kiss"""
         # actual command
         
-        url = "https://v2.yiff.rest/furry/kiss"
+        url = "https://v2.yiff.rest/furry/kiss?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -381,10 +368,9 @@ class Degen(commands.Cog):
         """a lick"""
         # actual command
         
-        url = "https://v2.yiff.rest/furry/lick"
+        url = "https://v2.yiff.rest/furry/lick?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -404,10 +390,9 @@ class Degen(commands.Cog):
         """floof proposal"""
         # actual command
         
-        url = "https://v2.yiff.rest/furry/propose"
+        url = "https://v2.yiff.rest/furry/propose?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
         headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
         resp = requests.get(url, headers=headers,).json()
@@ -440,10 +425,9 @@ class Degen(commands.Cog):
                 await ctx.send("This command is only available in NSFW channels.")
             
             else:
-                url = "https://v2.yiff.rest/furry/bulge"
+                url = "https://v2.yiff.rest/furry/bulge?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()
@@ -473,10 +457,9 @@ class Degen(commands.Cog):
 
             else:
                 
-                url = "https://v2.yiff.rest/furry/yiff/andromorph"
+                url = "https://v2.yiff.rest/furry/yiff/andromorph?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()
@@ -504,10 +487,9 @@ class Degen(commands.Cog):
 
             else:
                 
-                url = "https://v2.yiff.rest/furry/yiff/gay"
+                url = "https://v2.yiff.rest/furry/yiff/gay?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()
@@ -534,10 +516,9 @@ class Degen(commands.Cog):
                 await ctx.send("This command is only available in NSFW channels.")
 
             else:
-                url = "https://v2.yiff.rest/furry/yiff/gynomorph"
+                url = "https://v2.yiff.rest/furry/yiff/gynomorph?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()
@@ -565,10 +546,9 @@ class Degen(commands.Cog):
 
             else:
                 
-                url = "https://v2.yiff.rest/furry/yiff/lesbian"
+                url = "https://v2.yiff.rest/furry/yiff/lesbian?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()
@@ -597,10 +577,9 @@ class Degen(commands.Cog):
 
             else:
                 
-                url = "https://v2.yiff.rest/furry/yiff/straight"
+                url = "https://v2.yiff.rest/furry/yiff/straight?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()
@@ -628,10 +607,9 @@ class Degen(commands.Cog):
         
             else:
                 
-                url = "https://v2.yiff.rest/furry/yiff/dickgirl"
+                url = "https://v2.yiff.rest/furry/yiff/dickgirl?notes=disabled"
 
                 headers = CaseInsensitiveDict()
-                headers["Authorization"] = "f93e5762a2f3aa861d60f2163dc111faff2669aa"
                 headers["User-Agent"] = "Swiss-Discord-Bot/2.1.0 (caeden0452@gmail.com)"
 
                 resp = requests.get(url, headers=headers,).json()

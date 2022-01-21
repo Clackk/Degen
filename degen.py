@@ -64,7 +64,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## ramomize embed color
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="A blep picture!", color=color)
@@ -86,7 +86,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## ramomize embed color
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="A cheeta picture!", color=color)
@@ -109,7 +109,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## ramomize embed color
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="A Dik Dik picture!", color=color)
@@ -132,7 +132,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## ramomize embed color
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="A cute lynx picture!", color=color)
@@ -173,7 +173,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Boop*", description="hehehe", color=color)
@@ -194,7 +194,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Cuddle*", description="hehehe", color=color)
@@ -217,7 +217,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Flop*", description="hehehe", color=color)
@@ -240,7 +240,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Fursuit*", description="bro I want one", color=color)
@@ -263,7 +263,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="OwO", description="hey, you looked it up", color=color)
@@ -287,7 +287,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Hold*", description="mm warm floofs", color=color)
@@ -309,7 +309,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Howl*", description="*ahem* *howl*", color=color)
@@ -332,7 +332,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Hug*", description="thas cute", color=color)
@@ -354,7 +354,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Kiss*", description=":eyes:", color=color)
@@ -377,14 +377,14 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Lick*", description="**mlem**", color=color)
         embed.set_image(url=uwu)
         embed.set_footer(text="Powered by yiff.rest")
         await ctx.send(embed=embed)
-        
+
     @furry.command()
     async def propose(self, ctx):
         """floof proposal"""
@@ -399,7 +399,7 @@ class Degen(commands.Cog):
         yiff = json.dumps(resp)
         url = json.loads(yiff)
         blep = url.get("images")
-        uwu = blep[0].get("url")
+        uwu = blep[0].get("yiffMediaURL")
         ## create embed for picture
         color = random.randint(0, 0xffffff)
         embed = discord.Embed(title="*Propose*", description="wedding menace mac", color=color)
@@ -434,7 +434,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="*Bulge*", description="*owo*", color=color)
@@ -466,7 +466,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="OWO", description="*Blep*", color=color)
@@ -496,7 +496,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="*mlem*", description="*real degen hours*", color=color)
@@ -525,7 +525,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
@@ -555,7 +555,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
@@ -586,7 +586,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)
@@ -616,7 +616,7 @@ class Degen(commands.Cog):
                 yiff = json.dumps(resp)
                 url = json.loads(yiff)
                 blep = url.get("images")
-                uwu = blep[0].get("url")
+                uwu = blep[0].get("yiffMediaURL")
                 ## create embed for picture
                 color = random.randint(0, 0xffffff)
                 embed = discord.Embed(title="*OWO*", description="*real degen hours*", color=color)

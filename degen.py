@@ -159,6 +159,22 @@ class Degen(commands.Cog):
         #blep = url.get("images")
         #uwu = blep[0].get("url")
         #await ctx.send(uwu)
+    
+    @commands.command()
+    async def status(self, ctx):
+        """Check the status your API key"""
+        # actual command
+        url = "https://yiff.rest/status"
+
+        headers = CaseInsensitiveDict()
+        headers["User-Agent"] = "place user agent here"
+
+        resp = requests.get(url, headers=headers,).json()
+        yiff = json.dumps(resp)
+        url = json.loads(yiff)
+        blep = url.get("status")
+        uwu = blep.get("furry")
+        await ctx.send(uwu)
         
     @furry.command()
     async def boop(self, ctx):

@@ -267,7 +267,7 @@ class Degen(commands.Cog):
                 
     @furry.command()
     async def furbutt(self, ctx):
-        """hehehe"""
+        """hehehe ;3"""
         # actual command
         # Check if user is in DM
         if ctx.guild is None:

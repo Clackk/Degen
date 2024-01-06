@@ -80,7 +80,7 @@ class Degen(commands.Cog):
         url = "https://v2.yiff.rest/animals/cheeta?notes=disabled"
 
         headers = CaseInsensitiveDict()
-        headers["User-Agent"] = "place user agent here(racketclack on e621.net)"
+        headers["User-Agent"] = "place user agent here(Clackk on e621.net)"
 
         resp = requests.get(url, headers=headers,).json()
         yiff = json.dumps(resp)
